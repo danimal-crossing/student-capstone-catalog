@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import CapstoneIndex from '../views/CapstoneIndex.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import CapstoneIndex from '../views/CapstoneIndex.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -21,15 +21,15 @@ Vue.use(VueRouter)
   },
   {
     path: '/index',
-    name: 'capstone-index',
+    name: 'capstoneIndex',
     component: CapstoneIndex
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;
