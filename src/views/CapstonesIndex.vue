@@ -1,5 +1,5 @@
 <template>
-  <div class="capstoneIndex">
+  <div class="capstones-index">
     <h1>{{ message }}</h1>
   </div>
 </template>
@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
-      message: "Hello from index"
+      message: "Hello from index",
     };
   },
-  created: function() {},
-  methods: {}
+  created: function () {},
+  methods: {},
 };
 </script>
