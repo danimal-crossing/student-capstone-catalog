@@ -1,5 +1,5 @@
 <template>
-  <div class="capstone-index">
+  <div class="capstoneIndex">
     <h1>{{ message }}</h1>
   </div>
 </template>
