@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import CapstonesShow from '../views/CapstoneShow.vue'
+import CapstonesShow from '../views/CapstonesShow.vue'
+import CapstonesIndex from '../views/CapstonesIndex.vue';
 
-Vue.use(VueRouter)
+
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -20,16 +22,21 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/capstones-show',
-    name: 'CapstonesShow',
+    path: '/capstones/:id',
+    name: 'capstones-show',
     component: CapstonesShow
+  },
+  {
+    path: '/capstones',
+    name: 'capstones-index',
+    component: CapstonesIndex
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;

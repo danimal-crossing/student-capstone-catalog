@@ -1,5 +1,5 @@
 <template>
-  <div class="capstones-show">
+  <div class="capstones-index">
     <h1>{{ message }}</h1>
   </div>
 </template>
@@ -11,7 +11,7 @@
 export default {
   data: function () {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Hello from index",
     };
   },
   created: function () {},
