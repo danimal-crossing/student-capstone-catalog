@@ -1,5 +1,5 @@
 <template>
-  <div class="capstoneIndex">
+  <div class="capstones-index">
     <h1>{{ message }}</h1>
 
     <div v-for="capstone in capstones">
