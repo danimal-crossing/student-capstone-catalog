@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import CapstonesShow from '../views/CapstonesShow.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import CapstonesShow from '../views/CapstonesShow.vue';
 import CapstonesIndex from '../views/CapstonesIndex.vue';
 
 
@@ -22,14 +22,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/capstones/:id',
-    name: 'capstones-show',
-    component: CapstonesShow
-  },
-  {
     path: '/capstones',
     name: 'capstones-index',
     component: CapstonesIndex
+  },
+  {
+    path: '/capstones/:id',
+    name: 'capstones-show',
+    component: CapstonesShow
   }
 ];
 
