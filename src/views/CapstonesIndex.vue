@@ -4,8 +4,8 @@
 
     <div v-for="capstone in capstones">
       <h1>{{ capstone.name }}</h1>
-      <img v-bind:src="capstone.screenshot_url" alt="">
-      <router-link v-bind:to="capstone.url">View Capstone Project</router-link>
+      <img v-bind:src="capstone.screenshot_url" alt=""> <br>  
+      <router-link :to="`/capstones/${capstone.id}`">More Details</router-link>
     </div>
   </div>
 </template>
@@ -14,18 +14,12 @@
 </style>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 export default {
   data: function() {
     return {
       message: "Capstone Projects",
-      capstones: [
-        {
-          name: "rs-track",
-          screenshot_url:
-            "https://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg"
-        }
-      ]
+      capstones: []
     };
   },
   created: function() {

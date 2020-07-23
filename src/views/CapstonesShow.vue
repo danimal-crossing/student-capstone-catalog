@@ -20,7 +20,7 @@ export default {
     };
   },
   created: function () {
-    axios.get(`/api/capstones/1 `).then((response) => {
+    axios.get(`/api/capstones/${this.$route.params.id}`).then((response) => {
       console.log(response.data);
       this.capstone = response.data;
     });
