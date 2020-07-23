@@ -5,7 +5,10 @@
     <div v-for="capstone in capstones">
       <h1>{{ capstone.name }}</h1>
       <img v-bind:src="capstone.screenshot_url" alt=""> <br>
-      <router-link v-bind:to="capstone.url">View Capstone Project</router-link>
+      <router-link v-bind:to="capstone.url">View Capstone Website</router-link>
+      <router-link :to="`/capstones/${capstone.id}`">More Details</router-link>
+
+
     </div>
   </div>
 </template>
