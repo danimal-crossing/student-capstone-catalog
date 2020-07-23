@@ -3,7 +3,7 @@
     <h2>{{ capstone.student.first_name }} {{ capstone.student.last_name }}</h2>
     <p>Capstone Name: {{ capstone.name }}</p>
     <p>Capstone Description: {{ capstone.description }}</p>
-    <img :src="capstone.url"> 
+    <img :src="capstone.screenshot_url"> 
   </div>
 </template>
 
@@ -13,16 +13,16 @@
 <script>
 import axios from "axios";
 export default {
-  data: function() {
+  data: function () {
     return {
-      capstone: {}
+      capstone: {},
     };
   },
-  created: function() {
-    axios.get(`/api/capstones/${this.$route.params.id}`).then(response => {
+  created: function () {
+    axios.get(`/api/capstones/${this.$route.params.id}`).then((response) => {
       console.log(response.data);
       this.capstone = response.data;
     });
-  }
+  },
 };
 </script>
