@@ -19,13 +19,12 @@
       </div> 
       </div>
     </div>
-     <button></button>
   </div>
 </template>
 
 <style>
-.class {
-  background-color: cornflowerblue;
+h1 {
+  text-align: center;
 }
 img {
   height: 15em;
