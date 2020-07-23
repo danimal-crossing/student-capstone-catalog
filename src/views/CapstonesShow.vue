@@ -4,11 +4,17 @@
     <p>By: {{ capstone.student.first_name }} {{ capstone.student.last_name }}</p>
     <p>Capstone Description: {{ capstone.description }}</p>
     <router-link :to="capstone.url">Check it out here!</router-link> <br>
-    <img :src="capstone.screenshot_url"> 
+    <img :src="capstone.screenshot_url"> <br>
+    <router-link :to="`/capstones`">Back to Capstones</router-link>
   </div>
 </template>
 
 <style>
+/* @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"); */
+
+h2 {
+  color: purple;
+}
 </style>
 
 <script>
