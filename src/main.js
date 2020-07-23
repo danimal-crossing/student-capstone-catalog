@@ -6,7 +6,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 axios.defaults.baseURL =
-  process.env.NODE_ENV === "development" ? " https://salty-everglades-72150.herokuapp.com/" : "/";
+  process.env.NODE_ENV === "development" ? " https://salty-everglades-72150.herokuapp.com/" : "/capstones";
 
 Vue.config.productionTip = false;
 
