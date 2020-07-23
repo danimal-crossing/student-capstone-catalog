@@ -11,7 +11,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ capstone.name }}</h5>
               <h6 class="card-text">By: {{ capstone.student.first_name }} {{ capstone.student.last_name }}</h6>
-              <p class="card-text"><router-link :to="`/capstones/${capstone.id}`">More Details</router-link></p>
+              <p class="card-text"><router-link :to="`/capstones/${capstone.id}`" class="btn btn-primary">More Details</router-link></p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
