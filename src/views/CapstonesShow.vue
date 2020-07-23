@@ -1,8 +1,9 @@
 <template>
   <div class="capstones-show">
-    <h2>{{ capstone.student.first_name }} {{ capstone.student.last_name }}</h2>
-    <p>Capstone Name: {{ capstone.name }}</p>
+    <h2>{{ capstone.name }}</h2>
+    <p>By: {{ capstone.student.first_name }} {{ capstone.student.last_name }}</p>
     <p>Capstone Description: {{ capstone.description }}</p>
+    <router-link :to="capstone.url">Check it out here!</router-link> <br>
     <img :src="capstone.screenshot_url"> 
   </div>
 </template>
