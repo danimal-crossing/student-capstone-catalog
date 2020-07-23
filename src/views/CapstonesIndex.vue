@@ -1,6 +1,6 @@
 <template>
   <div class="capstones-index">
-    <h1>{{ message }}</h1>
+
 
     <div class="container">
       <div class="row row-cols-3">
