@@ -3,9 +3,9 @@
     <h2>{{ capstone.name }}</h2>
     <p>By: {{ capstone.student.first_name }} {{ capstone.student.last_name }}</p>
     <p>Capstone Description: {{ capstone.description }}</p>
-    <router-link :to="capstone.url">Check it out here!</router-link> <br>
+    <router-link :to="capstone.url" class="btn btn-primary">Check it out here!</router-link> <br>
     <img :src="capstone.screenshot_url"> <br>
-    <router-link :to="`/capstones`" class="btn-btn-primary ">Back to Capstones</router-link>
+    <router-link :to="`/capstones`" class="btn btn-primary">Back to Capstones</router-link>
   </div>
 </template>
 
