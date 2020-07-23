@@ -6,7 +6,7 @@
       <div class="row row-cols-3">
         <div v-for="capstone in capstones" class="col">
         <div class="card-deck" >
-          <div class="card">
+          <div class="card text-white bg-secondary mb-3 border-primary mb-3">
             <img v-bind:src="capstone.screenshot_url" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ capstone.name }}</h5>
@@ -19,12 +19,14 @@
       </div> 
       </div>
     </div>
-
-     
+     <button></button>
   </div>
 </template>
 
 <style>
+.class {
+  background-color: cornflowerblue;
+}
 img {
   height: 15em;
 }
@@ -33,19 +35,19 @@ img {
 <script>
 import axios from "axios";
 export default {
-  data: function() {
+  data: function () {
     return {
       message: "Capstone Projects",
-      capstones: []
+      capstones: [],
     };
   },
-  created: function() {
-    axios.get("/api/capstones").then(response => {
+  created: function () {
+    axios.get("/api/capstones").then((response) => {
       console.log("All Capstones", response.data);
       this.capstones = response.data;
     });
     console.log("index");
   },
-  methods: {}
+  methods: {},
 };
 </script>
