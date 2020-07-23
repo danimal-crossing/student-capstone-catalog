@@ -10,6 +10,7 @@
             <img v-bind:src="capstone.screenshot_url" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ capstone.name }}</h5>
+              <h6 class="card-text">By: {{ capstone.student.first_name }} {{ capstone.student.last_name }}</h6>
               <p class="card-text"><router-link :to="`/capstones/${capstone.id}`">More Details</router-link></p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
@@ -32,19 +33,19 @@ img {
 <script>
 import axios from "axios";
 export default {
-  data: function () {
+  data: function() {
     return {
       message: "Capstone Projects",
-      capstones: [],
+      capstones: []
     };
   },
-  created: function () {
-    axios.get("/api/capstones").then((response) => {
+  created: function() {
+    axios.get("/api/capstones").then(response => {
       console.log("All Capstones", response.data);
       this.capstones = response.data;
     });
     console.log("index");
   },
-  methods: {},
+  methods: {}
 };
 </script>
