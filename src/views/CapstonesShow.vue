@@ -1,13 +1,20 @@
 <template>
   <div class="capstones-show">
-    <h2>{{ capstone.student.first_name }} {{ capstone.student.last_name }}</h2>
-    <p>Capstone Name: {{ capstone.name }}</p>
+    <h2>{{ capstone.name }}</h2>
+    <p>By: {{ capstone.student.first_name }} {{ capstone.student.last_name }}</p>
     <p>Capstone Description: {{ capstone.description }}</p>
-    <img :src="capstone.screenshot_url"> 
+    <router-link :to="capstone.url">Check it out here!</router-link> <br>
+    <img :src="capstone.screenshot_url"> <br>
+    <router-link :to="`/capstones`">Back to Capstones</router-link>
   </div>
 </template>
 
 <style>
+/* @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"); */
+
+h2 {
+  color: purple;
+}
 </style>
 
 <script>
